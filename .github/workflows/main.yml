@@ -16,6 +16,18 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: 20
+        
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build project
+      run: npm run build
+
+    - name: Show build output
+      run: |
+          pwd
+          ls -la
+          ls -la dist
 
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
