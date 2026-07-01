@@ -1,0 +1,284 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .base,
+  .framework,
+  .vite {
+    inset-inline: 0;
+    margin: 0 auto;
+  }
+
+  .base {
+    width: 170px;
+    position: relative;
+    z-index: 0;
+  }
+
+  .framework,
+  .vite {
+    position: absolute;
+  }
+
+  .framework {
+    z-index: 1;
+    top: 34px;
+    height: 28px;
+    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg)
+      rotateY(39deg) scale(1.4);
+  }
+
+  .vite {
+    z-index: 0;
+    top: 107px;
+    height: 26px;
+    width: auto;
+    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg)
+      rotateY(39deg) scale(0.8);
+  }
+
+  .offer-btn {
+    margin-top: 60px;
+    padding: 14px 36px;
+    border: none;
+    border-radius: 999px;
+
+    background: linear-gradient(
+      135deg,
+      #646cff,
+      #42d392
+    );
+
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 10px 25px rgba(100, 108, 255, 0.3);
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(100, 108, 255, 0.45);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+/* =========================
+   Modal Styles
+========================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  position: relative;
+
+  width: 90%;
+  max-width: 500px;
+
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 32px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+
+  animation: modalIn 0.25s ease;
+}
+
+.close-btn {
+  position: absolute;
+
+  top: 16px;
+  right: 16px;
+
+  border: none;
+  background: transparent;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  color: #64748b;
+
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #ef4444;
+  }
+}
+
+.modal h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #1e293b;
+}
+
+.modal p {
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.accept-btn {
+  width: 100%;
+
+  padding: 14px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #646cff,
+    #42d392
+  );
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.offer-success {
+  margin-top: 50px;
+  width: 100%;
+  max-width: 420px;
+
+  padding: 28px;
+
+  border-radius: 24px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(100, 108, 255, 0.12),
+    rgba(66, 211, 146, 0.12)
+  );
+
+  border: 1px solid rgba(100, 108, 255, 0.15);
+
+  text-align: center;
+
+  backdrop-filter: blur(10px);
+
+  animation: successPop 0.4s ease;
+}
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #646cff,
+    #42d392
+  );
+
+  font-size: 34px;
+
+  box-shadow: 0 10px 25px rgba(100, 108, 255, 0.25);
+}
+
+.offer-success h2 {
+  margin-bottom: 12px;
+  color: #1e293b;
+}
+
+.offer-success p {
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.reset-btn {
+  padding: 12px 30px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #ef4444;
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(239, 68, 68, 0.25);
+}
+
+.reset-btn:active {
+  transform: translateY(0);
+}
+
+@keyframes successPop {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
