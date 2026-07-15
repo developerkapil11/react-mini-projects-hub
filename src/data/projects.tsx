@@ -22,5 +22,17 @@ export const projects = [
     name: "Mortgage Calculator",
     path: "/mortgage-calculator",
     icon: "🧮"
+  },
+  {
+    id: 5,
+    name: "Undoable Counter",
+    path: "/undoable-counter",
+    icon: "🔢"
+  },
+  {
+    id:6,
+    name: "Shopping List",
+    path: "/shopping-list",
+    icon: "📝"
   }
 ];

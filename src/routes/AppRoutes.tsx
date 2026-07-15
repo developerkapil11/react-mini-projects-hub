@@ -5,6 +5,8 @@ import { CountdownTimer } from "../pages/CountdownTimer/CountdownTimer";
 import FaqComp from "../pages/Faq/FaqComp";
 import ModalFlow from "../pages/ModalFlow/ModalFlow";
 import MortgageCalculator from "../pages/MortgageCalculator/MCalculator";
+import UndoableCounter from "../pages/UndoableCounter/UndoableCounter";
+import ShoppingList from "../pages/ShoppingList/ShoppingList";
 
 const AppRoutes = () => {
     return (
@@ -17,6 +19,8 @@ const AppRoutes = () => {
             <Route path='/faq' element={<FaqComp />} />
             <Route path='/modal-flow' element={<ModalFlow />} />
             <Route path='/mortgage-calculator' element={<MortgageCalculator />} />
+            <Route path='/undoable-counter' element={<UndoableCounter/>} />
+            <Route path='/shopping-list' element={<ShoppingList/>} />
         </Routes>
     )
 }

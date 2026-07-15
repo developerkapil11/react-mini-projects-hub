@@ -4,6 +4,8 @@ import { CountdownTimer } from '../CountdownTimer/CountdownTimer'
 import FaqComp from '../Faq/FaqComp'
 import ModalFlow from '../ModalFlow/ModalFlow'
 import MortgageCalculator from '../MortgageCalculator/MCalculator'
+import UndoableCounter from '../UndoableCounter/UndoableCounter'
+import ShoppingList from '../ShoppingList/ShoppingList'
 import './Home.css'
 
 export const Home = () => {
@@ -17,7 +19,9 @@ export const Home = () => {
     1: <CountdownTimer />,
     2: <FaqComp />,
     3: <ModalFlow />,
-    4: <MortgageCalculator />
+    4: <MortgageCalculator />,
+    5: <UndoableCounter />,
+    6: <ShoppingList />
   }
 
   return (
