@@ -7,6 +7,8 @@ import ModalFlow from "../pages/ModalFlow/ModalFlow";
 import MortgageCalculator from "../pages/MortgageCalculator/MCalculator";
 import UndoableCounter from "../pages/UndoableCounter/UndoableCounter";
 import ShoppingList from "../pages/ShoppingList/ShoppingList";
+import SortingMovies from "../pages/SortingMovies/SortingMovies";
+
 
 const AppRoutes = () => {
     return (
@@ -21,6 +23,7 @@ const AppRoutes = () => {
             <Route path='/mortgage-calculator' element={<MortgageCalculator />} />
             <Route path='/undoable-counter' element={<UndoableCounter/>} />
             <Route path='/shopping-list' element={<ShoppingList/>} />
+            <Route path='/sorting-movies' element={<SortingMovies/>} />
         </Routes>
     )
 }

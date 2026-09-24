@@ -7,6 +7,7 @@ import MortgageCalculator from '../MortgageCalculator/MCalculator'
 import UndoableCounter from '../UndoableCounter/UndoableCounter'
 import ShoppingList from '../ShoppingList/ShoppingList'
 import './Home.css'
+import SortingMovies from '../SortingMovies/SortingMovies'
 
 export const Home = () => {
   const [selectedId, setSelectedId] = useState(projects[0]?.id)
@@ -21,7 +22,8 @@ export const Home = () => {
     3: <ModalFlow />,
     4: <MortgageCalculator />,
     5: <UndoableCounter />,
-    6: <ShoppingList />
+    6: <ShoppingList />,
+    7: <SortingMovies />
   }
 
   return (

@@ -2,14 +2,24 @@ import { useState } from "react";
 import "./MCalculator.css";
 
 export default function MortgageCalculator() {
-    const [principal, setPrincipal] = useState("200000")
-    const [interest, setInterest] = useState("10")
-    const [year, setYear] = useState("5")
+    const [formData, setFormData] = useState({
+        principal:200000,
+        interest: 10,
+        year: 5
+    })
+    
+    const handleChange = (e:any) => {
+        const {name, value} = e.target
+        setFormData((prev)=>({
+            ...prev,
+            [name]: value
+        }))
+    }
 
     const calculateEMI = () => {
-        const p = Number(principal)
-        const r = Number(interest) / 12 / 100
-        const n = Number(year) * 12
+        const p = formData.principal
+        const r = formData.interest / 12 / 100
+        const n = formData.year * 12
 
         if(!p || !n) return 0;
         if(r === 0) return Math.round(p / n)
@@ -30,27 +40,30 @@ export default function MortgageCalculator() {
             <div className="form-group">
             <label>Principal</label>
             <input
+                name="principal"
                 type="number"
-                value={principal}
-                onChange={(e)=>setPrincipal(e.target.value)}
+                value={formData.principal}
+                onChange={handleChange}
             />
             </div>
 
             <div className="form-group">
             <label>Interest (%)</label>
             <input
+                name="interest"
                 type="number"
-                value={interest}
-                onChange={(e)=>setInterest(e.target.value)}
+                value={formData.interest}
+                onChange={handleChange}
             />
             </div>
 
             <div className="form-group">
             <label>Years</label>
             <input
+                name="year"
                 type="number"
-                value={year}
-                onChange={(e)=>setYear(e.target.value)}
+                value={formData.year}
+                onChange={handleChange}
             />
             </div>
 

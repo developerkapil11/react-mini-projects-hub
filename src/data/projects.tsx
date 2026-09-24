@@ -34,5 +34,12 @@ export const projects = [
     name: "Shopping List",
     path: "/shopping-list",
     icon: "📝"
-  }
+  },
+  {
+    id:7,
+    name: "Sorting Movies",
+    path: "/sorting-movies",
+    icon: "🎬"
+  },
+
 ];
