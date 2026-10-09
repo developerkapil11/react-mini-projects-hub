@@ -8,6 +8,7 @@ import MortgageCalculator from "../pages/MortgageCalculator/MCalculator";
 import UndoableCounter from "../pages/UndoableCounter/UndoableCounter";
 import ShoppingList from "../pages/ShoppingList/ShoppingList";
 import SortingMovies from "../pages/SortingMovies/SortingMovies";
+import FilterSearch from "../pages/FilterSearch/filterSearch";
 
 
 const AppRoutes = () => {
@@ -24,6 +25,7 @@ const AppRoutes = () => {
             <Route path='/undoable-counter' element={<UndoableCounter/>} />
             <Route path='/shopping-list' element={<ShoppingList/>} />
             <Route path='/sorting-movies' element={<SortingMovies/>} />
+            <Route path='/filter-search' element={<FilterSearch />} />
         </Routes>
     )
 }

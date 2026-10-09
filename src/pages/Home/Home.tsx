@@ -8,6 +8,7 @@ import UndoableCounter from '../UndoableCounter/UndoableCounter'
 import ShoppingList from '../ShoppingList/ShoppingList'
 import './Home.css'
 import SortingMovies from '../SortingMovies/SortingMovies'
+import FilterSearch from '../FilterSearch/filterSearch'
 
 export const Home = () => {
   const [selectedId, setSelectedId] = useState(projects[0]?.id)
@@ -23,7 +24,8 @@ export const Home = () => {
     4: <MortgageCalculator />,
     5: <UndoableCounter />,
     6: <ShoppingList />,
-    7: <SortingMovies />
+    7: <SortingMovies />,
+    8: <FilterSearch />
   }
 
   return (

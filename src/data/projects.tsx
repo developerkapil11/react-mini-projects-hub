@@ -41,5 +41,11 @@ export const projects = [
     path: "/sorting-movies",
     icon: "🎬"
   },
+  {
+    id: 8,
+    name: "Filter + Search",
+    path: "/filter-search",
+    icon: "🔍"
+  },
 
 ];

@@ -41,6 +41,7 @@ body {
   border-radius: 6px;
   outline: none;
   transition: 0.3s;
+  color: #000000;
 }
 
 .form-group input:focus {
